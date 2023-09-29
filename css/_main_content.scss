@@ -1,0 +1,241 @@
+.main_content {
+  background-image: url(../assets/bg_contact.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  filter: contrast(1.1);
+
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  &_info {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--16px);
+    margin-bottom: 20px;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .games_grids {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    &_left {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+
+      &_game {
+
+        &_background {
+          width: 100%;
+          height: 120px;
+          //width: 160px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          border-radius: 16px;
+        }
+
+        a {
+          font-weight: 700;
+          -webkit-line-clamp: 1;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          font-size: var(--16px);
+
+          &:hover {
+            transition: ease 0.2s;
+            color: var(--blueColor)
+          }
+        }
+
+        p {
+          font-size: var(--12px);
+          font-weight: 300;
+        }
+
+      }
+    }
+
+    &_right {
+      display: grid;
+      grid-template-areas:
+        "Dynamite Gator"
+        "Deals Deals";
+      grid-template-rows: repeat(2, 1fr);
+      gap: 16px;
+
+      button {
+        padding: 5px 13px;
+        border-radius: 12px;
+        background: var(--blueColor);
+        font-weight: 600;
+        font-size: var(--minFS);
+      }
+
+      &_game {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 16px;
+        font-weight: 700;
+        font-size: var(--16px);
+        padding: 16px 12px;
+
+        p {
+          width: 75%;
+          margin-bottom: 5px;
+        }
+
+        p:nth-child(2) {
+          font-weight: 400;
+          font-size: var(--minFS);
+        }
+
+      }
+
+      &_deals {
+        grid-area: Deals;
+
+        .deals_background_image {
+          width: 100%;
+          height: 120px;
+          background-image: url(../assets/banner_promo.jpeg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+          border-radius: 16px;
+        }
+
+        .deals_info {
+          display: flex;
+          justify-content: space-between;
+          font-size: var(--16px);
+          font-weight: 700;
+
+          p:nth-child(2) {
+            font-weight: 300;
+            font-size: var(--12px);
+          }
+
+          button {
+            padding: 5px 15px;
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .contact_form {
+    position: relative;
+    margin-top: 75px;
+
+    p {
+      font-size: var(--16px);
+      font-weight: 400;
+    }
+
+    #contact_form {
+      margin: 25px 0 60px 0;
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+
+      input,
+      textarea {
+        width: 100%;
+        margin-bottom: 15px;
+        padding: 12px 15px;
+      }
+
+      input[type=checkbox] {
+        width: auto;
+        margin: 0 5px 0 0;
+      }
+
+      .checkbox_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        label a {
+          text-decoration: underline;
+        }
+
+        button {
+          padding: 10px 40px;
+          font-size: var(--16px);
+          font-weight: 700;
+        }
+
+      }
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
+}
+
+.warning {
+  font-size: var(--14px);
+  font-weight: 400;
+  margin-top: 25px;
+}
+
+
+.games_grids_left_game:nth-child(1) .games_grids_left_game_background {
+  background-image: url(../assets/games/gametype.2813.jpg);
+}
+
+.games_grids_left_game:nth-child(2) .games_grids_left_game_background {
+  background-image: url(../assets/games/gametype.4298.jpg);
+}
+
+.games_grids_left_game:nth-child(3) .games_grids_left_game_background {
+  background-image: url(../assets/games/gametype.4749.jpg);
+}
+
+.games_grids_left_game:nth-child(4) .games_grids_left_game_background {
+  background-image: url(../assets/games/gametype.4779.jpg);
+}
+
+.games_grids_left_game:nth-child(5) .games_grids_left_game_background {
+  background-image: url(../assets/games/gametype.5423.jpg);
+}
+
+.games_grids_left_game:nth-child(6) .games_grids_left_game_background {
+  background-image: url(../assets/games/gametype.1882.jpg);
+}
+
+.games_grids_right_game:nth-child(1) {
+  background-image: url(../assets/games/DynamiteRichesMW_BigWin_385x190.jpeg);
+  grid-area: Dynamite;
+}
+
+.games_grids_right_game:nth-child(2) {
+  background-image: url(../assets/games/GOTM_GatorGold_385x190.jpeg);
+  grid-area: Gator;
+}
+
+@media(max-width:750px) {
+  .main_content .container .games_grids {
+    display: flex;
+    flex-direction: column;
+  }
+}

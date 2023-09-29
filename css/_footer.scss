@@ -1,0 +1,42 @@
+footer {
+  background-color: rgba(1, 1, 31, 1);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 25px 0;
+
+    .footer_links {
+      margin-bottom: 15px;
+      font-weight: 700;
+      font-size: var(--18px);
+    }
+
+    .warn_info {
+      text-align: center;
+      font-size: var(--14px);
+      font-weight: 400;
+
+      hr {
+        margin: 25px 0;
+        opacity: 0.1;
+      }
+    }
+
+    .rights_and_icons {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .social_icons a {
+        margin-right: 12px;
+      }
+
+      .social_icons a:nth-child(3) {
+        margin-right: 0;
+      }
+    }
+  }
+}

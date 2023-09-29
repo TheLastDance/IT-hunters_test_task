@@ -1,0 +1,544 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--whiteColor);
+}
+
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: var(--navColor);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 12px 0;
+  font-weight: 700;
+  margin: 0 auto;
+  z-index: 2;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+header div:nth-child(1) {
+  display: flex;
+  align-items: center;
+}
+header div:nth-child(1) img {
+  width: 48px;
+  height: 48px;
+}
+header div:nth-child(1) nav {
+  padding: 0 30px;
+}
+header div:nth-child(1) nav a {
+  position: relative;
+  padding: 0 0 20px 0;
+  margin-right: 18px;
+  font-size: var(--16px);
+}
+header div:nth-child(1) nav a:hover {
+  background-image: var(--purpleGradientColor);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+header div:nth-child(1) nav a:hover::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  border-radius: 4px;
+  box-shadow: 0px 4px 16px rgba(138, 97, 255, 0.6);
+  background: var(--purpleGradientColor);
+}
+header .autorization {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  white-space: nowrap;
+}
+header .autorization a:nth-child(1) {
+  margin-right: 30px;
+}
+header .autorization a {
+  font-size: var(--18px);
+}
+header .autorization a button {
+  font-size: var(--18px);
+  padding: 9px 30px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  header .autorization {
+    flex-direction: column;
+  }
+  header .autorization a:nth-child(1) {
+    margin: 0 0 5px 0;
+  }
+}
+main .hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.26)), url(../assets/bg_hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left 20%;
+}
+main .hero .container {
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro h1 {
+  margin-top: 55px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.intro p {
+  font-size: var(--28px);
+  text-transform: capitalize;
+  text-align: center;
+}
+.intro .intro_buttons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.intro .intro_buttons button {
+  padding: 10px 0;
+  width: 160px;
+  font-size: var(--18px);
+  margin: 5px 8px;
+  font-weight: 700;
+}
+.intro .intro_buttons a:nth-child(1) button {
+  background: transparent;
+  border: 2px solid var(--whiteColor);
+}
+.intro .intro_buttons a:nth-child(2) button {
+  padding: 12px 0;
+}
+
+.register {
+  padding: 15px;
+  margin: 60px 50px 0 50px;
+  background: linear-gradient(268deg, rgba(79, 89, 124, 0.4) 0%, rgba(123, 135, 175, 0.4) 51%, rgba(63, 72, 105, 0.4) 100%);
+  border-radius: 16px;
+  border: 1px solid #3A4054;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+}
+.register .register_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.register .register_info h3 {
+  text-transform: uppercase;
+}
+.register .register_info_icons {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.register .register_info_icons .icon_container {
+  display: flex;
+  align-items: center;
+}
+.register .register_info_icons .icon_container img {
+  width: 36px;
+  height: 36px;
+}
+.register .register_info_icons .icon_container p {
+  font-weight: 600;
+  font-size: var(--12px);
+}
+.register form .register_inputs input,
+.register form .register_inputs button {
+  margin-bottom: 5px;
+}
+.register form .register_inputs {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.register form .register_inputs button {
+  padding: 12px 0;
+  width: 160px;
+  font-size: var(--18px);
+  font-weight: 700;
+}
+.register form .checkbox_container {
+  margin-top: 15px;
+}
+.register form .checkbox_container label a {
+  text-decoration: underline;
+}
+
+@media (max-width: 750px) {
+  .register form .register_inputs {
+    flex-direction: column;
+    align-items: center;
+  }
+  .register .register_info_icons {
+    width: auto;
+  }
+}
+@media (max-width: 500px) {
+  .register .register_info_icons {
+    flex-direction: column;
+  }
+  .register .register_info {
+    align-items: center;
+  }
+}
+@media (max-width: 350px) {
+  .intro_buttons {
+    flex-direction: column;
+  }
+}
+.main_content {
+  background-image: url(../assets/bg_contact.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  filter: contrast(1.1);
+}
+.main_content .container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.main_content_info {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--16px);
+  margin-bottom: 20px;
+}
+.main_content_info a {
+  text-decoration: underline;
+}
+.main_content .games_grids {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.main_content .games_grids_left {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.main_content .games_grids_left_game_background {
+  width: 100%;
+  height: 120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 16px;
+}
+.main_content .games_grids_left_game a {
+  font-weight: 700;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: var(--16px);
+}
+.main_content .games_grids_left_game a:hover {
+  transition: ease 0.2s;
+  color: var(--blueColor);
+}
+.main_content .games_grids_left_game p {
+  font-size: var(--12px);
+  font-weight: 300;
+}
+.main_content .games_grids_right {
+  display: grid;
+  grid-template-areas: "Dynamite Gator" "Deals Deals";
+  grid-template-rows: repeat(2, 1fr);
+  gap: 16px;
+}
+.main_content .games_grids_right button {
+  padding: 5px 13px;
+  border-radius: 12px;
+  background: var(--blueColor);
+  font-weight: 600;
+  font-size: var(--minFS);
+}
+.main_content .games_grids_right_game {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: var(--16px);
+  padding: 16px 12px;
+}
+.main_content .games_grids_right_game p {
+  width: 75%;
+  margin-bottom: 5px;
+}
+.main_content .games_grids_right_game p:nth-child(2) {
+  font-weight: 400;
+  font-size: var(--minFS);
+}
+.main_content .games_grids_right_deals {
+  grid-area: Deals;
+}
+.main_content .games_grids_right_deals .deals_background_image {
+  width: 100%;
+  height: 120px;
+  background-image: url(../assets/banner_promo.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 16px;
+}
+.main_content .games_grids_right_deals .deals_info {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--16px);
+  font-weight: 700;
+}
+.main_content .games_grids_right_deals .deals_info p:nth-child(2) {
+  font-weight: 300;
+  font-size: var(--12px);
+}
+.main_content .games_grids_right_deals .deals_info button {
+  padding: 5px 15px;
+}
+.main_content .contact_form {
+  position: relative;
+  margin-top: 75px;
+}
+.main_content .contact_form p {
+  font-size: var(--16px);
+  font-weight: 400;
+}
+.main_content .contact_form #contact_form {
+  margin: 25px 0 60px 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+.main_content .contact_form #contact_form input,
+.main_content .contact_form #contact_form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px 15px;
+}
+.main_content .contact_form #contact_form input[type=checkbox] {
+  width: auto;
+  margin: 0 5px 0 0;
+}
+.main_content .contact_form #contact_form .checkbox_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main_content .contact_form #contact_form .checkbox_container label a {
+  text-decoration: underline;
+}
+.main_content .contact_form #contact_form .checkbox_container button {
+  padding: 10px 40px;
+  font-size: var(--16px);
+  font-weight: 700;
+}
+.main_content .contact_form img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.warning {
+  font-size: var(--14px);
+  font-weight: 400;
+  margin-top: 25px;
+}
+
+.games_grids_left_game:nth-child(1) .games_grids_left_game_background {
+  background-image: url(../assets/games/gametype.2813.jpg);
+}
+
+.games_grids_left_game:nth-child(2) .games_grids_left_game_background {
+  background-image: url(../assets/games/gametype.4298.jpg);
+}
+
+.games_grids_left_game:nth-child(3) .games_grids_left_game_background {
+  background-image: url(../assets/games/gametype.4749.jpg);
+}
+
+.games_grids_left_game:nth-child(4) .games_grids_left_game_background {
+  background-image: url(../assets/games/gametype.4779.jpg);
+}
+
+.games_grids_left_game:nth-child(5) .games_grids_left_game_background {
+  background-image: url(../assets/games/gametype.5423.jpg);
+}
+
+.games_grids_left_game:nth-child(6) .games_grids_left_game_background {
+  background-image: url(../assets/games/gametype.1882.jpg);
+}
+
+.games_grids_right_game:nth-child(1) {
+  background-image: url(../assets/games/DynamiteRichesMW_BigWin_385x190.jpeg);
+  grid-area: Dynamite;
+}
+
+.games_grids_right_game:nth-child(2) {
+  background-image: url(../assets/games/GOTM_GatorGold_385x190.jpeg);
+  grid-area: Gator;
+}
+
+@media (max-width: 750px) {
+  .main_content .container .games_grids {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer {
+  background-color: rgb(1, 1, 31);
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 25px 0;
+}
+footer .container .footer_links {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: var(--18px);
+}
+footer .container .warn_info {
+  text-align: center;
+  font-size: var(--14px);
+  font-weight: 400;
+}
+footer .container .warn_info hr {
+  margin: 25px 0;
+  opacity: 0.1;
+}
+footer .container .rights_and_icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .container .rights_and_icons .social_icons a {
+  margin-right: 12px;
+}
+footer .container .rights_and_icons .social_icons a:nth-child(3) {
+  margin-right: 0;
+}
+
+:root {
+  font-family: Proxima-Nova, system-ui, Helvetica, Arial, sans-serif;
+  --purpleGradientColor: linear-gradient(266deg, #4870FF 0%, #FA00FF 100%);
+  --blueColor: #4870FF;
+  --whiteColor: #fff;
+  --transparentGradient: linear-gradient(268deg, rgba(78.73, 88.59, 124.31, 0.40) 0%, rgba(123.45, 134.66, 175.31, 0.40) 51%, rgba(62.67, 71.87, 105.19, 0.40) 100%);
+  --navColor: #01011fa1;
+  --scaleFactor: 1;
+  --h1: calc(48px * var(--scaleFactor));
+  --h2: calc(36px * var(--scaleFactor));
+  --h3: calc(22px * var(--scaleFactor));
+  --minFS: calc(10px * var(--scaleFactor));
+  --12px: calc(12px * var(--scaleFactor));
+  --14px: calc(14px * var(--scaleFactor));
+  --16px: calc(16px * var(--scaleFactor));
+  --18px: calc(18px * var(--scaleFactor));
+  --28px: calc(28px * var(--scaleFactor));
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+}
+
+h3 {
+  font-size: var(--h3);
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  color: rgb(5, 13, 42);
+  padding: 15px;
+  border-radius: 8px;
+  font-size: var(--16px);
+  font-weight: 400;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {
+  font-size: var(--16px);
+  color: rgb(5, 13, 42);
+  font-weight: 400;
+}
+input::placeholder,
+textarea::placeholder {
+  font-size: var(--16px);
+  color: rgb(5, 13, 42);
+  font-weight: 400;
+}
+
+.container {
+  width: 1000px;
+}
+
+button {
+  background: var(--purpleGradientColor);
+  box-shadow: 0px 4px 16px rgba(138, 97, 255, 0.6);
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1020px) {
+  :root {
+    --scaleFactor: 0.9;
+  }
+  .container {
+    width: unset;
+    max-width: 1000px;
+    padding: 0 5px;
+  }
+  footer .container {
+    padding: 25px 5px;
+  }
+}
+@media (max-width: 750px) {
+  :root {
+    --scaleFactor: 0.8;
+  }
+}
+@media (max-width: 450px) {
+  :root {
+    --scaleFactor: 0.7;
+  }
+}/*# sourceMappingURL=styles.css.map */

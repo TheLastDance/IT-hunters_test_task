@@ -1,0 +1,155 @@
+main {
+
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.26)), url(../assets/bg_hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left 20%;
+
+    .container {
+      margin: 0 auto;
+      padding: 70px 0;
+    }
+  }
+}
+
+.intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    margin-top: 55px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  p {
+    font-size: var(--28px);
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  .intro_buttons {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+    button {
+      padding: 10px 0;
+      width: 160px;
+      font-size: var(--18px);
+      margin: 5px 8px;
+      font-weight: 700;
+    }
+
+    a:nth-child(1) button {
+      background: transparent;
+      border: 2px solid var(--whiteColor);
+    }
+
+    a:nth-child(2) button {
+      padding: 12px 0;
+    }
+  }
+}
+
+.register {
+  padding: 15px;
+  margin: 60px 50px 0 50px;
+  background: linear-gradient(268deg, rgba(78.73, 88.59, 124.31, 0.40) 0%, rgba(123.45, 134.66, 175.31, 0.40) 51%, rgba(62.67, 71.87, 105.19, 0.40) 100%);
+  border-radius: 16px;
+  border: 1px solid #3A4054;
+  backdrop-filter: blur(8px);
+
+  .register_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    h3 {
+      text-transform: uppercase;
+    }
+
+    &_icons {
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+
+      .icon_container {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 36px;
+          height: 36px;
+        }
+
+        p {
+          font-weight: 600;
+          font-size: var(--12px);
+        }
+
+      }
+    }
+  }
+
+  form {
+
+    .register_inputs input,
+    .register_inputs button {
+      margin-bottom: 5px;
+    }
+
+    .register_inputs {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      button {
+        padding: 12px 0;
+        width: 160px;
+        font-size: var(--18px);
+        font-weight: 700;
+      }
+    }
+
+    .checkbox_container {
+      margin-top: 15px;
+
+      label a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media(max-width:750px) {
+  .register form .register_inputs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .register .register_info_icons {
+    width: auto;
+  }
+}
+
+@media(max-width:500px) {
+  .register .register_info_icons {
+    flex-direction: column;
+  }
+
+  .register .register_info {
+    align-items: center;
+  }
+}
+
+@media(max-width:350px) {
+  .intro_buttons {
+    flex-direction: column;
+  }
+}
