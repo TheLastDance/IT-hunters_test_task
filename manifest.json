@@ -1,0 +1,25 @@
+{
+  "short_name": "Awesome Games",
+  "name": "Awesome Games Test project",
+  "icons": [
+    {
+      "src": "./assets/icons/24h.png",
+      "type": "image/png",
+      "sizes": "75x75"
+    },
+    {
+      "src": "./assets/icons/dice.png",
+      "type": "image/png",
+      "sizes": "75x75"
+    },
+    {
+      "src": "./assets/icons/slot.png",
+      "type": "image/png",
+      "sizes": "75x75"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
