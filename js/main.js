@@ -18,6 +18,7 @@ signUp.addEventListener('click', (e) => {
   popup.style.display = 'block';
   burger.classList.remove('active')
   burgerNav.classList.remove('open');
+  body.classList.remove("noScroll");
 })
 
 document.onreadystatechange = function () {
