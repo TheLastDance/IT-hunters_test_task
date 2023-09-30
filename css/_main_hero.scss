@@ -64,6 +64,7 @@ main {
   border: 1px solid #3A4054;
   backdrop-filter: blur(8px);
   transition: ease 0.3s;
+  opacity: 0;
 
 
   .register_info {
@@ -127,6 +128,12 @@ main {
         text-decoration: underline;
       }
     }
+  }
+}
+
+@media(max-width:1000px) {
+  .register {
+    display: none;
   }
 }
 

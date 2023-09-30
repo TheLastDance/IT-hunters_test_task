@@ -2,10 +2,22 @@ const loader = document.querySelector('#loader');
 const root = document.querySelector('#root');
 const popup = document.querySelector('.register');
 const signUp = document.querySelector('#sign_up');
+const body = document.querySelector('body');
+const burger = document.querySelector('#burger_field');
+const burgerNav = document.querySelector('#burger_navigation');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('active');
+  body.classList.toggle("noScroll");
+  burgerNav.classList.toggle('open');
+})
 
 signUp.addEventListener('click', (e) => {
   e.preventDefault();
   popup.style.opacity = "1";
+  popup.style.display = 'block';
+  burger.classList.remove('active')
+  burgerNav.classList.remove('open');
 })
 
 document.onreadystatechange = function () {
