@@ -3,24 +3,9 @@
   "name": "Awesome Games Test project",
   "icons": [
     {
-      "src": "./assets/icons/favicon.ico",
+      "src": "./favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
-    },
-    {
-      "src": "./assets/icons/24h.png",
-      "type": "image/png",
-      "sizes": "75x75"
-    },
-    {
-      "src": "./assets/icons/dice.png",
-      "type": "image/png",
-      "sizes": "75x75"
-    },
-    {
-      "src": "./assets/icons/slot.png",
-      "type": "image/png",
-      "sizes": "75x75"
     },
     {
       "src": "./assets/icons/android-icon-36x36.png",
