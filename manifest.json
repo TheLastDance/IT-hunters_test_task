@@ -18,7 +18,7 @@
       "sizes": "75x75"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "https://thelastdance.github.io/IT-hunters_test_task/index.html",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
