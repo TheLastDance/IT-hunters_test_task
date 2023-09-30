@@ -261,6 +261,7 @@ main .hero .container {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 16px;
+  margin-bottom: 5px;
 }
 .main_content .games_grids_left_game a {
   font-weight: 700;
@@ -326,6 +327,7 @@ main .hero .container {
   justify-content: space-between;
   font-size: var(--16px);
   font-weight: 700;
+  margin-top: 5px;
 }
 .main_content .games_grids_right_deals .deals_info p:nth-child(2) {
   font-weight: 300;
@@ -434,9 +436,6 @@ main .hero .container {
   }
   .main_content .container .games_grids .games_grids_right {
     margin-top: 15px;
-  }
-  .deals_info {
-    margin-top: 5px;
   }
 }
 footer {
@@ -548,10 +547,9 @@ footer .container .rights_and_icons .social_icons a:nth-child(3) {
 }
 :root {
   font-family: Proxima-Nova, system-ui, Helvetica, Arial, sans-serif;
-  letter-spacing: 0.6px;
   --purpleGradientColor: linear-gradient(266deg, #4870FF 0%, #FA00FF 100%);
   --blueColor: #4870FF;
-  --whiteColor: #fff;
+  --whiteColor: #ffffff;
   --transparentGradient: linear-gradient(268deg, rgba(78.73, 88.59, 124.31, 0.40) 0%, rgba(123.45, 134.66, 175.31, 0.40) 51%, rgba(62.67, 71.87, 105.19, 0.40) 100%);
   --navColor: #01011fa1;
   --scaleFactor: 1;
