@@ -89,7 +89,7 @@ header .autorization a button {
   }
 }
 main .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.26)), url(../assets/bg_hero.png);
+  background-image: url(../assets/bg_hero.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left 20%;
@@ -144,6 +144,7 @@ main .hero .container {
   border: 1px solid #3A4054;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
+  transition: ease 0.3s;
 }
 .register .register_info {
   display: flex;
@@ -220,7 +221,6 @@ main .hero .container {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  filter: contrast(1.1);
 }
 .main_content .container {
   display: flex;
@@ -329,15 +329,23 @@ main .hero .container {
   position: relative;
   margin-top: 75px;
 }
+.main_content .contact_form h2 {
+  position: relative;
+  z-index: 1;
+}
 .main_content .contact_form p {
   font-size: var(--16px);
   font-weight: 400;
+  position: relative;
+  z-index: 1;
 }
 .main_content .contact_form #contact_form {
   margin: 25px 0 60px 0;
   display: flex;
   flex-direction: column;
   max-width: 400px;
+  position: relative;
+  z-index: 1;
 }
 .main_content .contact_form #contact_form input,
 .main_content .contact_form #contact_form textarea {
@@ -366,7 +374,7 @@ main .hero .container {
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 .warning {
@@ -414,6 +422,12 @@ main .hero .container {
     display: flex;
     flex-direction: column;
   }
+  .main_content .container .games_grids .games_grids_right {
+    margin-top: 15px;
+  }
+  .deals_info {
+    margin-top: 5px;
+  }
 }
 footer {
   background-color: rgb(1, 1, 31);
@@ -443,6 +457,7 @@ footer .container .rights_and_icons {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  font-size: var(--14px);
 }
 footer .container .rights_and_icons .social_icons a {
   margin-right: 12px;
@@ -451,6 +466,76 @@ footer .container .rights_and_icons .social_icons a:nth-child(3) {
   margin-right: 0;
 }
 
+.loader-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-size: 10px 10px;
+  background: black;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #FFF #FFF transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent #9b4dca #9b4dca;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+
+.loader::before {
+  width: 32px;
+  height: 32px;
+  border-color: #FFF #FFF transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 :root {
   font-family: Proxima-Nova, system-ui, Helvetica, Arial, sans-serif;
   --purpleGradientColor: linear-gradient(266deg, #4870FF 0%, #FA00FF 100%);

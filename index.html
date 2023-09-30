@@ -9,188 +9,194 @@
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <div>
-        <img src="./assets/logo.svg" alt="company logo">
-        <nav>
-          <a href="#games">Games</a>
-          <a href="#contact_form">Contact Us</a>
-          <a href="">Terms of Use</a>
-          <a href="">About</a>
-        </nav>
-      </div>
-      <div class="autorization">
-        <a href="">Sign up</a>
-        <a href=""><button type="button">Log In</button></a>
-      </div>
-    </div>
-  </header>
-  <main>
-    <div class="hero">
+  <div id="loader" class="loader-overlay">
+    <span class="loader"></span>
+  </div>
+  <div id="root">
+    <header>
       <div class="container">
-        <section class="intro">
-          <h1>awesome html5 games <br> - NO MONEY!</h1>
-          <p>Your perfect place to get some <br> fun and excitement</p>
-          <div class="intro_buttons">
-            <a href=""><button type="button">Log In</button></a>
-            <a href=""><button type="button">Play</button></a>
-          </div>
-        </section>
-        <section class="register">
-          <div class="register_info">
-            <h3>Create a free account now</h3>
-            <div class="register_info_icons">
-              <div class="icon_container">
-                <img src="./assets/icons/dice.png" alt="dice icon">
-                <p>1000+ Games available</p>
-              </div>
-              <div class="icon_container">
-                <img src="./assets/icons/slot.png" alt="slot icon">
-                <p>New game Every week</p>
-              </div>
-              <div class="icon_container">
-                <img src="./assets/icons/24h.png" alt="timer icon">
-                <p>Support our users 24/7</p>
-              </div>
-            </div>
-          </div>
-          <form id="register_from">
-            <div class="register_inputs">
-              <label><input type="text" class="first_name" name="first_name" placeholder="Firstname" required></label>
-              <label><input type="text" id="last_name" name="last_name" placeholder="Lastname" required></label>
-              <label><input type="email" class="email" name="email" placeholder="Email Address" required></label>
-              <button type="submit">Join now</button>
-            </div>
-            <div class="checkbox_container">
-              <input type="checkbox" id="privacy_policy" name="privacy_policy" value="no">
-              <label for="privacy_policy">I accept the <a href="">Privacy Policy</a></label>
-            </div>
-          </form>
-        </section>
+        <div>
+          <img src="./assets/logo.svg" alt="company logo">
+          <nav>
+            <a href="#games">Games</a>
+            <a href="#contact_form">Contact Us</a>
+            <a href="">Terms of Use</a>
+            <a href="">About</a>
+          </nav>
+        </div>
+        <div class="autorization">
+          <a href="" id="sign_up">Sign up</a>
+          <a href=""><button type="button">Log In</button></a>
+        </div>
       </div>
-    </div>
-    <div class="main_content">
-      <div class="container">
-        <section id="games" class="games">
-          <h2>Our Games</h2>
-          <div class="main_content_info">
-            <p>Get Virtual Welcome bonus after Sign Up</p>
-            <a href="">All games</a>
-          </div>
-          <div class="games_grids">
-            <div class="games_grids_left">
-              <div class="games_grids_left_game">
-                <div class="games_grids_left_game_background"></div>
-                <a href="">Double Jackpot</a>
-                <p>NetentGames</p>
-              </div>
-              <div class="games_grids_left_game">
-                <div class="games_grids_left_game_background"></div>
-                <a href="">All Aboard: Dynam ...</a>
-                <p>RushGameStudio</p>
-              </div>
-              <div class="games_grids_left_game">
-                <div class="games_grids_left_game_background"></div>
-                <a href="">Book Of Tombs</a>
-                <p>NetentGames</p>
-              </div>
-              <div class="games_grids_left_game">
-                <div class="games_grids_left_game_background"></div>
-                <a href="">Rudolph’s Ride</a>
-                <p>NetentGames</p>
-              </div>
-              <div class="games_grids_left_game">
-                <div class="games_grids_left_game_background"></div>
-                <a href="">Starburst XXXtreme</a>
-                <p>StarBurst Inc.</p>
-              </div>
-              <div class="games_grids_left_game">
-                <div class="games_grids_left_game_background"></div>
-                <a href="">Black Diamond</a>
-                <p>RushGameStudio</p>
-              </div>
+    </header>
+    <main>
+      <div class="hero">
+        <div class="container">
+          <section class="intro">
+            <h1>awesome html5 games <br> - NO MONEY!</h1>
+            <p>Your perfect place to get some <br> fun and excitement</p>
+            <div class="intro_buttons">
+              <a href=""><button type="button">Log In</button></a>
+              <a href=""><button type="button">Play</button></a>
             </div>
-            <div class="games_grids_right">
-              <div class="games_grids_right_game">
-                <p>Dynamite Riches Megaways</p>
-                <p>Miners revealed a gain of €46,672 for Sandra M.! You too, dynamite the reels of the Red Tiger Daily
-                  Jackpot machines</p>
-                <a href=""><button>Play now</button></a>
-              </div>
-              <div class="games_grids_right_game">
-                <p>Gator Gold Deluxe Gigablox</p>
-                <p>These swamps conceal many dangers but especially precious treasures. Will you be able to find them?
-                </p>
-                <a href=""><button>Play now</button></a>
-              </div>
-              <div class="games_grids_right_deals">
-                <div class="deals_background_image"></div>
-                <div class="deals_info">
-                  <div>
-                    <p>Our deals are not to be missed</p>
-                    <p>Discover a wide range of weekly promotions</p>
-                  </div>
-                  <a href=""><button>Read more</button></a>
+          </section>
+          <section style="opacity: 0;" class="register">
+            <div class="register_info">
+              <h3>Create a free account now</h3>
+              <div class="register_info_icons">
+                <div class="icon_container">
+                  <img src="./assets/icons/dice.png" alt="dice icon">
+                  <p>1000+ Games available</p>
+                </div>
+                <div class="icon_container">
+                  <img src="./assets/icons/slot.png" alt="slot icon">
+                  <p>New game Every week</p>
+                </div>
+                <div class="icon_container">
+                  <img src="./assets/icons/24h.png" alt="timer icon">
+                  <p>Support our users 24/7</p>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="warning">
-            <p>* We don't offer opportunities to play for real money. Our games are free demo. All games were invented
-              for
-              entertainment purposes only and do not offer real money prizes.</p>
-          </div>
-        </section>
-        <section class="contact_form">
-          <h2>Contact Us</h2>
-          <p>If you have some questions, send us a message</p>
-          <form id="contact_form">
-            <label><input type="text" class="first_name" name="first_name" placeholder="Firstname" required></label>
-            <label><input type="email" class="email" name="email" placeholder="Email Address" required></label>
-            <label for="your_message"></label>
-            <textarea name="your_message" id="your_message" placeholder="Your message here ..." rows="6"
-              cols="50"></textarea>
-            <div class="checkbox_container">
-              <div>
-                <input type="checkbox" id="privacy_policy_2" name="privacy_policy" value="no">
-                <label for="privacy_policy_2">I accept the <a href="">Privacy Policy</a></label>
+            <form id="register_from">
+              <div class="register_inputs">
+                <label><input type="text" class="first_name" name="first_name" placeholder="Firstname" required></label>
+                <label><input type="text" id="last_name" name="last_name" placeholder="Lastname" required></label>
+                <label><input type="email" class="email" name="email" placeholder="Email Address" required></label>
+                <button type="submit">Join now</button>
               </div>
-              <button type="submit">Send</button>
+              <div class="checkbox_container">
+                <input type="checkbox" id="privacy_policy" name="privacy_policy" value="no">
+                <label for="privacy_policy">I accept the <a href="">Privacy Policy</a></label>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+      <div class="main_content">
+        <div class="container">
+          <section id="games" class="games">
+            <h2>Our Games</h2>
+            <div class="main_content_info">
+              <p>Get Virtual Welcome bonus after Sign Up</p>
+              <a href="">All games</a>
             </div>
-          </form>
-          <img src="./assets/image.png" alt="casino bonus image">
+            <div class="games_grids">
+              <div class="games_grids_left">
+                <div class="games_grids_left_game">
+                  <div class="games_grids_left_game_background"></div>
+                  <a href="">Double Jackpot</a>
+                  <p>NetentGames</p>
+                </div>
+                <div class="games_grids_left_game">
+                  <div class="games_grids_left_game_background"></div>
+                  <a href="">All Aboard: Dynam ...</a>
+                  <p>RushGameStudio</p>
+                </div>
+                <div class="games_grids_left_game">
+                  <div class="games_grids_left_game_background"></div>
+                  <a href="">Book Of Tombs</a>
+                  <p>NetentGames</p>
+                </div>
+                <div class="games_grids_left_game">
+                  <div class="games_grids_left_game_background"></div>
+                  <a href="">Rudolph’s Ride</a>
+                  <p>NetentGames</p>
+                </div>
+                <div class="games_grids_left_game">
+                  <div class="games_grids_left_game_background"></div>
+                  <a href="">Starburst XXXtreme</a>
+                  <p>StarBurst Inc.</p>
+                </div>
+                <div class="games_grids_left_game">
+                  <div class="games_grids_left_game_background"></div>
+                  <a href="">Black Diamond</a>
+                  <p>RushGameStudio</p>
+                </div>
+              </div>
+              <div class="games_grids_right">
+                <div class="games_grids_right_game">
+                  <p>Dynamite Riches Megaways</p>
+                  <p>Miners revealed a gain of €46,672 for Sandra M.! You too, dynamite the reels of the Red Tiger Daily
+                    Jackpot machines</p>
+                  <a href=""><button>Play now</button></a>
+                </div>
+                <div class="games_grids_right_game">
+                  <p>Gator Gold Deluxe Gigablox</p>
+                  <p>These swamps conceal many dangers but especially precious treasures. Will you be able to find them?
+                  </p>
+                  <a href=""><button>Play now</button></a>
+                </div>
+                <div class="games_grids_right_deals">
+                  <div class="deals_background_image"></div>
+                  <div class="deals_info">
+                    <div>
+                      <p>Our deals are not to be missed</p>
+                      <p>Discover a wide range of weekly promotions</p>
+                    </div>
+                    <a href=""><button>Read more</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="warning">
+              <p>* We don't offer opportunities to play for real money. Our games are free demo. All games were invented
+                for
+                entertainment purposes only and do not offer real money prizes.</p>
+            </div>
+          </section>
+          <section class="contact_form">
+            <h2>Contact Us</h2>
+            <p>If you have some questions, send us a message</p>
+            <form id="contact_form">
+              <label><input type="text" class="first_name" name="first_name" placeholder="Firstname" required></label>
+              <label><input type="email" class="email" name="email" placeholder="Email Address" required></label>
+              <label for="your_message"></label>
+              <textarea name="your_message" id="your_message" placeholder="Your message here ..." rows="6"
+                cols="50"></textarea>
+              <div class="checkbox_container">
+                <div>
+                  <input type="checkbox" id="privacy_policy_2" name="privacy_policy" value="no">
+                  <label for="privacy_policy_2">I accept the <a href="">Privacy Policy</a></label>
+                </div>
+                <button type="submit">Send</button>
+              </div>
+            </form>
+            <img src="./assets/image.png" alt="casino bonus image">
+          </section>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <section class="footer_links">
+          <a href="">Disclaimer</a>
+          <span>|</span>
+          <a href="">Privacy Policy</a>
+          <span>|</span>
+          <a href="">Terms of Conditions</a>
+        </section>
+        <section class="warn_info">
+          <p>This site does not provide any form of online gambling and delivers information for entertainment and
+            research
+            purposes only. The games listed by Topwinningslots are intended for adult audience entertainment (underage
+            visitors are restricted) and do not offer real money or prizes. Practicing online free games does not imply
+            future success at 'real money' gambling.</p>
+          <hr>
+        </section>
+        <section class="rights_and_icons">
+          <p>2022 | © Lorem Inc. All Rights Reserved</p>
+          <div class="social_icons">
+            <a href=""><img src="./assets/fa-brands_twitter.svg" alt="twitter icon"></a>
+            <a href=""><img src="./assets/fa-brands_facebook-f.svg" alt="facebook icon"></a>
+            <a href=""><img src="./assets/fa6-brands_instagram.svg" alt="instagram icon"></a>
+          </div>
         </section>
       </div>
-    </div>
-  </main>
-  <footer>
-    <div class="container">
-      <section class="footer_links">
-        <a href="">Disclaimer</a>
-        <span>|</span>
-        <a href="">Privacy Policy</a>
-        <span>|</span>
-        <a href="">Terms of Conditions</a>
-      </section>
-      <section class="warn_info">
-        <p>This site does not provide any form of online gambling and delivers information for entertainment and
-          research
-          purposes only. The games listed by Topwinningslots are intended for adult audience entertainment (underage
-          visitors are restricted) and do not offer real money or prizes. Practicing online free games does not imply
-          future success at 'real money' gambling.</p>
-        <hr>
-      </section>
-      <section class="rights_and_icons">
-        <p>2022 | © Lorem Inc. All Rights Reserved</p>
-        <div class="social_icons">
-          <a href=""><img src="./assets/fa-brands_twitter.svg" alt="twitter icon"></a>
-          <a href=""><img src="./assets/fa-brands_facebook-f.svg" alt="facebook icon"></a>
-          <a href=""><img src="./assets/fa6-brands_instagram.svg" alt="instagram icon"></a>
-        </div>
-      </section>
-    </div>
-  </footer>
+    </footer>
+  </div>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
