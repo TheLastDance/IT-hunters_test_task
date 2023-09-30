@@ -2,6 +2,7 @@
 
 :root {
   font-family: Proxima-Nova, system-ui, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.6px;
   --purpleGradientColor: linear-gradient(266deg, #4870FF 0%, #FA00FF 100%);
   --blueColor: #4870FF;
   --whiteColor: #fff;
@@ -48,6 +49,7 @@ textarea {
     font-size: var(--16px);
     color: rgba(5, 13, 42, 1);
     font-weight: 400;
+    opacity: 0.4;
   }
 }
 

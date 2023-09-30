@@ -44,7 +44,7 @@
       "density": "4.0"
     }
   ],
-  "start_url": "https://thelastdance.github.io/IT-hunters_test_task/index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#1f0288",
   "background_color": "#000000"
