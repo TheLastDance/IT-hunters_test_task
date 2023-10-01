@@ -40,6 +40,40 @@
         <a href="">About</a>
       </nav>
     </div>
+    <div id="register_overlay">
+      <section id="register" class="register">
+        <span id="close_btn" class="close-btn">×</span>
+        <div class="register_info">
+          <h3>Create a free account now</h3>
+          <div class="register_info_icons">
+            <div class="icon_container">
+              <img src="./assets/icons/dice.png" alt="dice icon">
+              <p>1000+ Games available</p>
+            </div>
+            <div class="icon_container">
+              <img src="./assets/icons/slot.png" alt="slot icon">
+              <p>New game Every week</p>
+            </div>
+            <div class="icon_container">
+              <img src="./assets/icons/24h.png" alt="timer icon">
+              <p>Support our users 24/7</p>
+            </div>
+          </div>
+        </div>
+        <form id="register_from">
+          <div class="register_inputs">
+            <label><input type="text" class="first_name" name="first_name" placeholder="Firstname" required></label>
+            <label><input type="text" id="last_name" name="last_name" placeholder="Lastname" required></label>
+            <label><input type="email" class="email" name="email" placeholder="Email Address" required></label>
+            <button type="submit">Join now</button>
+          </div>
+          <div class="checkbox_container">
+            <input type="checkbox" id="privacy_policy" name="privacy_policy" value="no">
+            <label for="privacy_policy">I accept the <a href="">Privacy Policy</a></label>
+          </div>
+        </form>
+      </section>
+    </div>
     <header>
       <div class="container">
         <div id="menu-for-devices">
@@ -76,37 +110,6 @@
               <a href=""><button type="button">Log In</button></a>
               <a href=""><button type="button">Play</button></a>
             </div>
-          </section>
-          <section class="register">
-            <div class="register_info">
-              <h3>Create a free account now</h3>
-              <div class="register_info_icons">
-                <div class="icon_container">
-                  <img src="./assets/icons/dice.png" alt="dice icon">
-                  <p>1000+ Games available</p>
-                </div>
-                <div class="icon_container">
-                  <img src="./assets/icons/slot.png" alt="slot icon">
-                  <p>New game Every week</p>
-                </div>
-                <div class="icon_container">
-                  <img src="./assets/icons/24h.png" alt="timer icon">
-                  <p>Support our users 24/7</p>
-                </div>
-              </div>
-            </div>
-            <form id="register_from">
-              <div class="register_inputs">
-                <label><input type="text" class="first_name" name="first_name" placeholder="Firstname" required></label>
-                <label><input type="text" id="last_name" name="last_name" placeholder="Lastname" required></label>
-                <label><input type="email" class="email" name="email" placeholder="Email Address" required></label>
-                <button type="submit">Join now</button>
-              </div>
-              <div class="checkbox_container">
-                <input type="checkbox" id="privacy_policy" name="privacy_policy" value="no">
-                <label for="privacy_policy">I accept the <a href="">Privacy Policy</a></label>
-              </div>
-            </form>
           </section>
         </div>
       </div>
