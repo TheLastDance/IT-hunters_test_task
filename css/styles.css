@@ -196,6 +196,7 @@ main .hero .container {
 }
 
 .register {
+  position: relative;
   padding: 15px;
   background: linear-gradient(268deg, rgba(79, 89, 124, 0.4) 0%, rgba(123, 135, 175, 0.4) 51%, rgba(63, 72, 105, 0.4) 100%);
   border-radius: 16px;
